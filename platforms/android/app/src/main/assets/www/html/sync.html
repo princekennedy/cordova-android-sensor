@@ -1,0 +1,77 @@
+<ons-page id="syncPage">
+  <ons-toolbar>
+    <div class="left" ng-click="go('Home')"><ons-back-button>Todos</ons-back-button></div>
+    <div class="center">Sync Scan</div>
+    <div class="right">
+      <ons-if platform="android" ng-click="go('Home')">
+<!--         <ons-toolbar-button component="button/save-task">
+          <ons-icon icon="md-save"></ons-icon>
+        </ons-toolbar-button> -->
+      </ons-if>
+    </div>
+  </ons-toolbar>
+
+  <div style="padding: 10px">
+    <br>
+    <ons-list-item modifier="nodivider">
+      <span>  Runner ID : </span> &nbsp;&nbsp;
+
+      <div class="center">
+        <ons-input 
+        	class="runnerId"  
+        	type="text" 
+        	placeholder="Runner ID" float>
+        </ons-input>
+      </div>
+    </ons-list-item>
+
+    <ons-list-item modifier="nodivider">
+      <span>  Location : </span> &nbsp;&nbsp;
+
+      <div class="center">
+        <ons-input 
+        	class="locationSync"  
+        	type="text" 
+        	placeholder="Location" float disabled>
+        </ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <span>  Project : </span> &nbsp;&nbsp;
+
+      <div class="center">
+        <ons-input 
+        	class="projectSync"  
+        	type="text" 
+        	placeholder="Project" float disabled>
+        </ons-input>
+      </div>
+    </ons-list-item>
+
+<!--     <ons-list-item modifier="nodivider">
+      <span>  Description : </span> &nbsp;&nbsp;
+        <textarea class="description" placeholder="Description"></textarea>
+    </ons-list-item> -->
+    <br>
+    <ons-list-item modifier="nodivider">
+      <span> Scan: </span> &nbsp;&nbsp;
+      <div class="center ">
+      	<span class="unSynced"></span> &nbsp; Samples.
+      </div>
+    </ons-list-item>
+
+    <br>
+
+  </div>
+
+  <ons-if platform="android other">
+    <div style="padding: 10px;">
+        <ons-button modifier="large" id="btnSubmit" ng-click="syncing()" class="add-sample-button">Sync</ons-button>
+    </div>
+  </ons-if>
+  <ons-if platform="ios">
+    <div style="padding: 10px;">
+        <ons-button modifier="large" id="btnSubmit" ng-click="syncing()" class="add-sample-button">Sync</ons-button>
+    </div>
+  </ons-if>
+</ons-page>

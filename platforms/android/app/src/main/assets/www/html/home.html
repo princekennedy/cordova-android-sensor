@@ -1,0 +1,114 @@
+<ons-page id="homePage">
+  <ons-splitter id="leftNav">
+    <ons-splitter-side swipeable width="250px" collapse swipe-target-width="50px">
+      <ons-page>
+
+        <ons-toolbar>Sensors</ons-toolbar>
+        <ons-list id="links">
+          <br>
+          
+<!--           <ons-list-item class="syncNurse" tappable ng-click="sync()" style="cursor: pointer" modifier="longdivider chevron">
+            <div class="left">
+              <ons-icon icon="fa-refresh" style="color: grey;"></ons-icon>
+            </div>
+            <div class="center">
+              Sync Data
+                &nbsp;&nbsp;&nbsp;
+                <span class="unSynced " style="border: 1px solid lightgrey ; border-radius:5px;padding: 0px 5px ">
+                </span>
+            </div>
+          </ons-list-item> -->
+          
+          <ons-list-item ng-click="go('Defaults')" tappable style="cursor: pointer" modifier="longdivider chevron">
+            <div class="left">
+              <ons-icon icon="fa-cog" style="color: grey;"></ons-icon>
+            </div>
+            <div class="center" >
+              Configure Url
+            </div>
+          </ons-list-item>
+        </ons-list>
+
+<!-- 
+        <ons-list-title></ons-list-title>
+        <ons-list id="default-category-list">
+          <ons-list-item ui-sref-active="active" ng-click="cancellable('Login' ,'logout.')" tappable>
+            <div class="left">
+              <ons-icon icon="fa-sign-out" style="color: grey;"></ons-icon>
+            </div>
+            <label  class="center" for="r-all"> Logout </label>
+          </ons-list-item>
+          <ons-list-item ui-sref-active="active" ng-click="exitFromApp()" tappable>
+            <div class="left">
+              <ons-icon icon="fa-sign-out" style="color: grey;"></ons-icon>
+            </div>
+            <label  class="center" for="r-all"> Exit App </label>
+
+          </ons-list-item> -->
+      <!--     <ons-list-item tappable category-id="">
+            <div class="left">
+              <ons-radio name="categoryGroup" input-id="r-no"></ons-radio>
+            </div>
+            <label class="center" for="r-no">No category</label>
+          </ons-list-item> -->
+        </ons-list>
+
+
+
+      </ons-page>
+
+    </ons-splitter-side>
+    <ons-splitter-content>
+
+    <!-- Third navigation component: Tabbar. This will disappear if the first or second components change their content. -->
+      <ons-page id="tabbarPage">
+        <ons-toolbar>
+          <div class="left">
+            <!-- Toolbar-button with different icons depending on the platform. -->
+            <ons-toolbar-button ng-click="nav('leftNav')" component="button">
+              <ons-icon icon="ion-navicon, material:md-menu" size="32px, material:24px"></ons-icon>
+            </ons-toolbar-button>
+          </div>
+          <div class="center">Android Sensors</div>
+          <div class="right">
+            <!-- Toolbar-button  only visible for iOS/other. -->
+            <ons-if platform="ios other">
+              <ons-toolbar-button class="enableScan" ng-click="scanner()" component="button">
+                New
+              </ons-toolbar-button>
+            </ons-if>
+          </div>
+        </ons-toolbar>
+
+
+        <div>
+          <ons-list>
+            <ons-list-item ng-repeat="getSense in sensorsArray">
+              
+              {{ $index + 1 }} &nbsp;
+              
+              <ons-button ng-click="sense(getSense)">
+              
+                {{ getSense }}
+              
+              </ons-button>
+            
+            </ons-list-item>
+
+          </ons-list>
+<!--           <p style="text-align: center;padding-left: 5px">
+            <ons-search-input class="search" placeholder="Search ID"></ons-search-input>
+          </p>
+
+          <ons-list class="sampleDiv" style="padding: 20px; border: none; background: inherit; max-height: 500px; overflow-y:auto;"></ons-list>   --> 
+        </div>
+<!--         <ons-bottom-toolbar style="border: none;">
+          &nbsp; <span class="title" style="color:lightgrey"></span>
+        </ons-bottom-toolbar> -->
+      </ons-page>
+
+
+    </ons-splitter-content>
+  </ons-splitter>
+</ons-page>
+

@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Android Ons Sense",
+  "short_name": "Android Ons Sense",
+  "version": "io.cordova.psensors",
+  "description": "This App use all android sensors",
+  "author": "Prince Kennedy",
+  "icons": [],
+  "start_url": "index.html"
+}

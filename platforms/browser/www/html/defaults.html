@@ -1,0 +1,67 @@
+<ons-page id="defaults">
+  <ons-toolbar>
+    <!-- <div class="left" ng-click="go('Home')"><ons-back-button>Todos</ons-back-button></div> -->
+    <div class="center">Set  Defaults</div>
+<!--     <div class="right">
+      <ons-if platform="android" ng-click="go('SampleDetail')">
+        <ons-toolbar-button component="button/save-task">
+          <ons-icon icon="md-save"></ons-icon>
+        </ons-toolbar-button>
+      </ons-if>
+    </div> -->
+  </ons-toolbar>
+<!--     <br>
+    <ons-list-item modifier="nodivider">
+    <div class="center">
+      <ons-input class="username" value="prince" type="text" placeholder="Username" float></ons-input>
+    </div>
+  </ons-list-item>
+  <ons-list-item modifier="nodivider">
+    <div class="center">
+      <ons-input class="password" value="1234" type="password" placeholder="Password" float></ons-input>
+    </div>
+  </ons-list-item> -->
+
+  <div style="padding: 10px">
+    <br>
+    <ons-list-item >
+      <div class="center">
+        <ons-input class="url"  type="url" placeholder="Url" float></ons-input>
+      </div>
+    </ons-list-item>    
+    <ons-list-item >
+      <div class="center" style="width: 100%; margin: auto;">
+        <ons-input class="auth-code"  type="text" placeholder="Authentication Code" float></ons-input>
+      </div>
+    </ons-list-item>
+
+<!--     <ons-list-item modifier="nodivider">
+      <div class="center">
+        <ons-input id="pid" type="text" ng-focus="timeInst('time')" class="time" placeholder="PID" float></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <div class="center">
+        <ons-input  
+          ng-focus="dateTimeInst('date-time')" 
+          class="date-time" 
+          type="text" 
+          placeholder="Date/Time" float>
+        </ons-input>
+      </div>
+    </ons-list-item> -->
+    <br>
+
+  </div>
+
+  <ons-if platform="android other">
+    <div style="padding: 10px;">
+        <ons-button modifier="large" id="btnSubmit" ng-click="saveDefaults()" class="add-sample-button">Save</ons-button>
+    </div>
+  </ons-if>
+  <ons-if platform="ios">
+    <div style="padding: 10px;">
+        <ons-button modifier="large" id="btnSubmit" ng-click="saveDefaults()" class="add-sample-button">Save</ons-button>
+    </div>
+  </ons-if>
+</ons-page>

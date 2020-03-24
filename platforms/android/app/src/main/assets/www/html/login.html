@@ -1,0 +1,59 @@
+<ons-page id="loginPage">
+  <ons-toolbar>
+    <div class="center">Login</div>
+    <div class="right">
+      <ons-if platform="android">
+<!--         <ons-toolbar-button component="button/save-task">
+          <ons-icon icon="md-save"></ons-icon>
+        </ons-toolbar-button> -->
+      </ons-if>
+    </div>
+  </ons-toolbar>
+	<ons-list id="pending-list">
+	      <ons-page>
+
+	        <div class="login-form">
+	        	<br>
+	          	<br>
+			    <ons-list-item modifier="nodivider">
+			      <div class="center">
+			        <ons-input 
+			        	class="url"  
+			        	type="text" 
+			        	value="http://10.0.17.25/scanner_tracker/api/"
+			        	placeholder="Url" float>
+			        	<!-- value="http://10.0.17.25/scanner_tracker/api/"  -->
+			        	<!-- value="http://192.168.43.76/scanner_tracker/api/"  -->
+
+			        </ons-input>
+			      </div>
+			    </ons-list-item>
+		        <ons-list-item modifier="nodivider">
+			      <div class="center">
+			        <ons-input class="username" value="prince" type="text" placeholder="Username" float></ons-input>
+			      </div>
+			    </ons-list-item>
+			    <ons-list-item modifier="nodivider">
+			      <div class="center">
+			        <ons-input class="password" value="1234" type="password" placeholder="Password" float></ons-input>
+			      </div>
+			    </ons-list-item>
+	          <br>
+	          <br>
+	          <div style="padding: 10px;">
+		          	<ons-button 
+		          		modifier="large" 
+		          		id="btnSubmit" 
+		          		ng-click="login()" 
+		          		class="login-button"
+		          	>Log In
+		          	</ons-button>
+		      </div>
+	          <br>
+	          <br>
+	          <!-- <ons-button modifier="quiet"class="forgot-password">Forgot password?</ons-button>   -->
+	        </div>
+	      </ons-page>
+	      
+	</ons-list>
+</ons-page>
